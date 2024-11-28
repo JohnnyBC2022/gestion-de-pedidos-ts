@@ -3,6 +3,7 @@ import MenuItem from "./MenuItem";
 import useOrder from "../hooks/useOrder";
 import OrderContents from "./OrderContents";
 import OrderTotals from "./OrderTotals";
+import TipPercentageForm from "./TipPercentageForm";
 
 const Main = () => {
 
@@ -28,6 +29,8 @@ const Main = () => {
           order={order}
           removeItem={removeItem}
         />
+        <TipPercentageForm />
+
         <OrderTotals
           order={order}
         />
