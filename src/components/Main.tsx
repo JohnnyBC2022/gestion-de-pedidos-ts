@@ -22,7 +22,7 @@ const Main = () => {
       </div>
 
       <div>
-        <h2>Pedidos</h2>
+        
       </div>
     </main>
   );
