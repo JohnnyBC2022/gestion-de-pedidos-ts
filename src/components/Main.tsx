@@ -35,6 +35,7 @@ const Main = () => {
 
         <OrderTotals
           order={order}
+          tip={tip}
         />
       </div>
     </main>
