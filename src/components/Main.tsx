@@ -8,10 +8,10 @@ const Main = () => {
     const { order, addItem } = useOrder();
 
   return (
-    <main className="max-w-7xl mx-auto py-20 grid md:grid-cols-2">
-      <div className="p-5">
+    <main className="max-w-7xl mx-auto py-20 grid md:grid-cols-2 ">
+      <div className="p-5 border border-dashed border-gray-500 rounded-lg mr-5">
         <h2 className="text-4xl font-black">Menú</h2>
-        <div className="space-y-2 mt-10">
+        <div className="space-y-3 mt-10">
           {menuItems.map((item) => (
             <MenuItem
                 key={item.id}
@@ -22,7 +22,7 @@ const Main = () => {
         </div>
       </div>
 
-      <div className="border border-dashed border-teal-300 p-5 rounded-lg space-y-10">
+      <div className="border border-dashed border-gray-500 p-5 rounded-lg space-y-10">
         <OrderContents
           order={order}
         />
