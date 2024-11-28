@@ -7,7 +7,7 @@ import TipPercentageForm from "./TipPercentageForm";
 
 const Main = () => {
 
-    const { order, addItem, removeItem } = useOrder();
+    const { order, addItem, removeItem, tip, setTip } = useOrder();
 
   return (
     <main className="max-w-7xl mx-auto py-20 grid md:grid-cols-2 ">
@@ -29,7 +29,9 @@ const Main = () => {
           order={order}
           removeItem={removeItem}
         />
-        <TipPercentageForm />
+        <TipPercentageForm 
+          setTip={setTip}
+        />
 
         <OrderTotals
           order={order}
