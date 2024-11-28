@@ -5,7 +5,7 @@ import OrderContents from "./OrderContents";
 
 const Main = () => {
 
-    const { order, addItem } = useOrder();
+    const { order, addItem, removeItem } = useOrder();
 
   return (
     <main className="max-w-7xl mx-auto py-20 grid md:grid-cols-2 ">
@@ -25,6 +25,7 @@ const Main = () => {
       <div className="border border-dashed border-gray-500 p-5 rounded-lg space-y-10">
         <OrderContents
           order={order}
+          removeItem={removeItem}
         />
       </div>
     </main>
