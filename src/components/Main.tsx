@@ -1,10 +1,11 @@
 import { menuItems } from "../data/db";
 import MenuItem from "./MenuItem";
 import useOrder from "../hooks/useOrder";
+import OrderContents from "./OrderContents";
 
 const Main = () => {
 
-    const { addItem } = useOrder();
+    const { order, addItem } = useOrder();
 
   return (
     <main className="max-w-7xl mx-auto py-20 grid md:grid-cols-2">
@@ -21,8 +22,10 @@ const Main = () => {
         </div>
       </div>
 
-      <div>
-        
+      <div className="border border-dashed border-teal-300 p-5 rounded-lg space-y-10">
+        <OrderContents
+          order={order}
+        />
       </div>
     </main>
   );
