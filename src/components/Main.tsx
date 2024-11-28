@@ -20,7 +20,7 @@ const Main = () => {
       </div>
 
       <div className="border border-dashed border-gray-500 p-5 rounded-lg space-y-10">
-        {order.length  ? (
+        {order.length ? (
           <>
             <OrderContents order={order} removeItem={removeItem} />
             <TipPercentageForm setTip={setTip} tip={tip} />
@@ -29,8 +29,7 @@ const Main = () => {
           </>
         ) : (
           <p className="text-center">No hay pedidos</p>
-        )
-        }
+        )}
       </div>
     </main>
   );
