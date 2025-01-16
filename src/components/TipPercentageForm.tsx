@@ -1,4 +1,5 @@
-import type { Dispatch, SetStateAction } from "react";
+import type { Dispatch } from "react";
+import { OrderActions } from "../reducers/order-reducer";
 
 const tipOptions = [
   { id: "tip-5", label: "5%", value: 0.05 },
@@ -7,11 +8,11 @@ const tipOptions = [
 ];
 
 type TipPercentageFormProps = {
-  setTip: Dispatch<SetStateAction<number>>;
+  dispatch: Dispatch<OrderActions>;
   tip: number;
 };
 
-const TipPercentageForm = ({ setTip, tip }: TipPercentageFormProps) => {
+const TipPercentageForm = ({ dispatch, tip }: TipPercentageFormProps) => {
   return (
     <div>
       <h2 className="font-black text-2xl pb-1">Propina:</h2>
@@ -25,7 +26,7 @@ const TipPercentageForm = ({ setTip, tip }: TipPercentageFormProps) => {
               name="tip"
               id={tipOption.id}
               value={tipOption.value}
-              onChange={(e) => setTip(+e.target.value)} // El + para convertir de string a número
+              onChange={(e) => dispatch({type: 'add-tip', payload: {value: +e.target.value}})} // El + para convertir de string a número
               checked={tipOption.value === tip}
             />
           </div>
